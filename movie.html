@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="movies icon" sizes="64x64" href="movie.png">
+    <link rel="stylesheet" href="movie.css">
+    <title>My Movie App</title>
+</head>
+<body>
+    <h1>Movie Search App</h1>
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search for a movie..." onkeypress="if(event.key === 'Enter') searchMovies()">
+      <button id="searchButton" onclick="searchMovies()">Search</button>
+    </div>
+    <div id="loading" style="display: none;">Loading...</div>
+    <div id="error" style="color: red; display: none;"></div>
+    <div id="movieGrid" class="movie-grid"></div>
+    <div id="movieModal" class="modal">
+      <div class="modal-content">
+        <h2 id="modalTitle"></h2>
+        <p id="modalRelease"></p>
+        <p id="modalRating"></p>
+        <p id="modalOverview"></p>
+        <button onclick="closeModal()">Close</button>
+      </div>
+    </div>
+  </div>
+  <script src="movie.js"> </script>
+</body>
+</html>

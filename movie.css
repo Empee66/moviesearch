@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+
+
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    background: url("download.jpg");
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+  }
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  h1 {
+    text-align: center;
+    color: #333;
+    font-family: oswald;
+  }
+  .search-bar {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  #searchInput {
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+    font-size: 16px;
+  }
+  #searchButton {
+    padding: 10px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+  }
+  #searchButton:hover {
+    background-color: #0056b3;
+  }
+  .movie-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  .movie-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  .movie-card:hover {
+    transform: scale(1.05);
+  }
+  .movie-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+  }
+  .movie-card div {
+    padding: 10px;
+  }
+  .movie-card h3 {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+  }
+  .movie-card p {
+    margin: 5px 0 0;
+    color: #666;
+    font-size: 14px;
+  }
+  .modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    justify-content: center;
+    align-items: center;
+  }
+  .modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 500px;
+    width: 90%;
+  }
+  .modal-content h2 {
+    margin-top: 0;
+  }
+  .modal-content button {
+    background: #dc3545;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .modal-content button:hover {
+    background: #c82333;
+  }
+  #loading, #error {
+    text-align: center;
+    margin: 20px 0;
+  }
+  @media (max-width: 600px) {
+    #searchInput {
+      width: 200px;
+    }
+    .movie-grid {
+      grid-template-columns: 1fr;
+    }
+  }
