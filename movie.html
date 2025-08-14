@@ -10,7 +10,7 @@
 <body>
     <h1>Movie Search App</h1>
     <div class="search-bar">
-      <input type="text" id="searchInput" placeholder="Search for a movie..." onkeypress="if(event.key === 'Enter') searchMovies()">
+      <input type="text" id="searchInput" placeholder="What movie would you like to watch?" onkeypress="if(event.key === 'Enter') searchMovies()">
       <button id="searchButton" onclick="searchMovies()">Search</button>
     </div>
     <div id="loading" style="display: none;">Loading...</div>
@@ -22,7 +22,7 @@
         <p id="modalRelease"></p>
         <p id="modalRating"></p>
         <p id="modalOverview"></p>
-        <button onclick="closeModal()">Close</button>
+        <button onclick="closeModal()">close</button>
       </div>
     </div>
   </div>

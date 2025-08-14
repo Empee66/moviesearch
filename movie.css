@@ -1,16 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 
-
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap');
 
 
 
 
 body {
     font-family: Arial, sans-serif;
-    background: url("download.jpg");
+    background: url("weatherbck.jpg");
     margin: 0;
     padding: 20px;
     min-height: 100vh;
+    background-repeat: no-repeat;
+background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
   }
   .container {
     max-width: 1200px;
@@ -18,8 +22,9 @@ body {
   }
   h1 {
     text-align: center;
-    color: #333;
-    font-family: oswald;
+    color: #00b7ff;
+    font-family: Cinzel Decorative
+    ;
   }
   .search-bar {
     display: flex;
@@ -27,6 +32,7 @@ body {
     margin-bottom: 20px;
   }
   #searchInput {
+    font-family: poppins;
     padding: 10px;
     width: 300px;
     border: 1px solid #ccc;
@@ -36,13 +42,13 @@ body {
   #searchButton {
     padding: 10px;
     border: none;
-    background-color: #007bff;
+    background-color: #000000;
     color: white;
     border-radius: 0 4px 4px 0;
     cursor: pointer;
   }
   #searchButton:hover {
-    background-color: #0056b3;
+    background-color: #2e3033;
   }
   .movie-grid {
     display: grid;
@@ -50,33 +56,36 @@ body {
     gap: 20px;
   }
   .movie-card {
-    background: white;
+    background: rgb(235, 236, 238);
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     cursor: pointer;
     transition: transform 0.2s;
+    width: 150px;
+    
+   
   }
   .movie-card:hover {
     transform: scale(1.05);
   }
   .movie-card img {
-    width: 100%;
-    height: 300px;
+    width: 150px;
+    height: 150px;
     object-fit: cover;
     border-radius: 8px 8px 0 0;
   }
-  .movie-card div {
-    padding: 10px;
-  }
+  
   .movie-card h3 {
     margin: 0;
     font-size: 16px;
     color: #333;
+    padding: 5px;
   }
   .movie-card p {
     margin: 5px 0 0;
     color: #666;
     font-size: 14px;
+    padding: 5px;
   }
   .modal {
     display: none;
@@ -90,22 +99,24 @@ body {
     align-items: center;
   }
   .modal-content {
-    background: white;
+    background: rgb(243, 236, 236);
     padding: 20px;
-    border-radius: 8px;
-    max-width: 500px;
+    border-radius: 20px;
+    max-width: 300px;
     width: 90%;
   }
   .modal-content h2 {
     margin-top: 0;
   }
   .modal-content button {
-    background: #dc3545;
-    color: white;
+    background:rgb(243, 236, 236);
+    color: rgb(0, 0, 0);
     border: none;
-    padding: 10px;
+    padding: 5px;
     border-radius: 4px;
     cursor: pointer;
+    height: 25px;
+    justify-self: right;
   }
   .modal-content button:hover {
     background: #c82333;

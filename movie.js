@@ -13,7 +13,7 @@ function searchMovies() {
 
   showLoading(true);
   document.getElementById('error').style.display = 'none';
-  console.log(`Fetching search: ${BASE_URL}?s=${encodeURIComponent(searchTerm)}&apikey=${API_KEY}&page=${currentPage}&type=movie`); // Debug
+  console.log(`Fetching search: ${BASE_URL}?s=${encodeURIComponent(searchTerm)}&apikey=${API_KEY}&page=${currentPage}&type=movie`); 
   fetch(`${BASE_URL}?s=${encodeURIComponent(searchTerm)}&apikey=${API_KEY}&page=${currentPage}&type=movie`)
     .then(response => {
       if (!response.ok) throw new Error('Failed to fetch movies: ' + response.status);
@@ -41,8 +41,9 @@ function displayMovies(movies) {
     const movieCard = document.createElement('div');
     movieCard.className = 'movie-card';
     movieCard.innerHTML = `
+     <div id="movie-info">
       <img src="${movie.Poster !== 'N/A' ? movie.Poster : 'https://via.placeholder.com/200x300?text=No+Poster'}" alt="${movie.Title}">
-      <div>
+     
         <h3>${movie.Title}</h3>
         <p>Year: ${movie.Year}</p>
       </div>
